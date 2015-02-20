@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Return of the Bar",
+  "description": "This extension brings back the beloved imgur upvote-downvote bar",
+  "version": "1.0",
+
+  "browser_action": {
+  },
+  "permissions": [
+    "activeTab",
+    "http://imgur.com/"
+  ],
+  "content_scripts": [ {
+    "css": ["bootstrap.css"],
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://imgur.com/gallery/*", "https://imgur.com/gallery/*"]
+  }]
+}
